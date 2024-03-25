@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { map } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { Post } from '../models/post';
 
 @Component({
   selector: 'app-post',
@@ -8,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent  {
-  protected post$ = inject(ActivatedRoute).data.pipe(
-    map(res => res['post'])
-  );
+  @Input({required: true})
+  protected post!: Post;
 }
