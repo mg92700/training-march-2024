@@ -56,6 +56,15 @@
       "root": "projects/app",
       "sourceRoot": "projects/app/src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+            "fr": {
+                "translation": "locale/messages.fr.xlf",
+                "baseHref": "fr"
+            }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -96,6 +105,9 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "fr": {
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"
@@ -108,6 +120,9 @@
             },
             "development": {
               "buildTarget": "app:build:development"
+            },
+            "fr": {
+              "buildTarget": "app:build:development,fr"
             }
           },
           "defaultConfiguration": "development"
@@ -119,21 +134,13 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-devkit/build-angular:jest",
           "options": {
             "polyfills": [
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/app/tsconfig.spec.json",
-            "assets": [
-              "projects/app/src/favicon.ico",
-              "projects/app/src/assets"
-            ],
-            "styles": [
-              "projects/app/src/styles.css"
-            ],
-            "scripts": []
+            "tsConfig": "projects/app/tsconfig.spec.json"
           }
         }
       }
