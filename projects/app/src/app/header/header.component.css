@@ -1,0 +1,16 @@
+:host {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 60px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+    &:first-child {
+        margin-left: 20px;
+    }
+}
