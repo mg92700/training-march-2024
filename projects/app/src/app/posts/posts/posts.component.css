@@ -12,7 +12,3 @@ section.row {
 table {
     border-spacing: 0;
 }
-
-tr:has(.active) button {
-    display: none;
-}

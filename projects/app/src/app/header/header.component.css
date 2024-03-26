@@ -14,3 +14,14 @@ a {
         margin-left: 20px;
     }
 }
+
+span {
+    color: white;
+
+    &.post::before {
+        content: 'post ';
+    }
+    &.author::before {
+        content: 'author ';
+    }
+}

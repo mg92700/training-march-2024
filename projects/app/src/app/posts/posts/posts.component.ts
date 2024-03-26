@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { PostsService } from '../posts.service';
 import { AsyncPipe } from '@angular/common';
 import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
+import { Post } from '../models/post';
 
 @Component({
     selector: 'app-posts',
@@ -11,6 +12,10 @@ import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
     imports: [RouterOutlet, RouterLinkActive, RouterLink, AsyncPipe]
 })
 export class PostsComponent {
-  protected posts$ = inject(PostsService).getAll();
+  private postService = inject(PostsService);
+  protected posts$ = this.postService.getAll();
 
+  selectPost(post: Post): void {
+    this.postService.addSelectedPost(post);
+  }
 }

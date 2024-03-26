@@ -9,7 +9,8 @@
     @for (post of post; track post) {
       <tr>
         <td>{{post.title}}</td>
-        <td><button [routerLink]="['/posts', post.id]" routerLinkActive="active">Allez aux détails</button></td>
+        <td><button [routerLink]="['/posts', post.id]">Allez aux détails</button></td>
+        <td><button (click)="selectPost(post)">Sélectionner le post</button></td>
       </tr>
     }
   </table>

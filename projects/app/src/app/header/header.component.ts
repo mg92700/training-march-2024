@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AuthorService } from '../posts/author.service';
+import { PostsService } from '../posts/posts.service';
 
 @Component({
     selector: 'app-header',
@@ -8,11 +10,9 @@ import { RouterLink } from '@angular/router';
     standalone: true,
     imports: [RouterLink]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
+  protected selectedPosts = inject(PostsService).selectedPosts;
+  protected selectedAuthors = inject(AuthorService).selectedAuthor;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
