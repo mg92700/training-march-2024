@@ -11,8 +11,8 @@ describe('PostComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
-    })
+    imports: [PostComponent]
+})
     .compileComponents();
   }));
 

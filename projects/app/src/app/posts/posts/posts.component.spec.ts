@@ -11,8 +11,8 @@ describe('PostsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PostsComponent ]
-    })
+    imports: [PostsComponent]
+})
     .compileComponents();
   }));
 

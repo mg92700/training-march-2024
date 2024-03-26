@@ -42,17 +42,6 @@
     },
     "app": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
       "root": "projects/app",
       "sourceRoot": "projects/app/src",
       "prefix": "app",

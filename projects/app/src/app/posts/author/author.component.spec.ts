@@ -11,8 +11,8 @@ describe('AuthorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthorComponent ]
-    })
+    imports: [AuthorComponent]
+})
     .compileComponents();
   }));
 
