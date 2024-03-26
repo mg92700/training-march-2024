@@ -1,7 +1,7 @@
-<ng-container *ngIf="post">
+@if (post) {
   <h2>{{post.title}}</h2>
   <img [src]="post.photo" alt="Post illustration">
   <p>
-      {{post.content}}
+    {{post.content}}
   </p>
-</ng-container>
+}
