@@ -1,5 +1,5 @@
 @if (author$ | async; as author) {
-  <img [src]="author.photo" alt="Auteur">
+  <img [ngSrc]="author.photo" alt="Auteur" width="770" height="513" priority>
   <h2>{{author.name}}</h2>
   @for (pseudo of author.pseudo; track pseudo) {
     <p>

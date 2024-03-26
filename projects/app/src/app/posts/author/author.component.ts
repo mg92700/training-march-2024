@@ -2,14 +2,14 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 import { AuthorService } from '../author.service';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 
 @Component({
     selector: 'app-author',
     templateUrl: './author.component.html',
     styleUrls: ['./author.component.css'],
     standalone: true,
-    imports: [AsyncPipe]
+    imports: [AsyncPipe, NgOptimizedImage]
 })
 export class AuthorComponent {
   private authorService = inject(AuthorService);
