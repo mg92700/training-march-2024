@@ -6,13 +6,15 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routes } from './app/routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { LoggerLevel, provideLogger } from 'my-lib';
 
 
 bootstrapApplication(AppComponent, {
     providers: [
         provideAnimations(),
         provideHttpClient(),
-        provideRouter(routes, withComponentInputBinding())
+        provideRouter(routes, withComponentInputBinding()),
+        provideLogger(LoggerLevel.INFO)
     ]
 })
   .catch(err => console.error(err));

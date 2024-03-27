@@ -7,7 +7,8 @@
     "build:lib": "ng build my-lib",
     "build": "ng build app --localize",
     "watch": "ng build app --watch --configuration development",
-    "test": "ng test app"
+    "test": "ng test app",
+    "test:lib": "ng test my-lib"
   },
   "private": true,
   "dependencies": {
