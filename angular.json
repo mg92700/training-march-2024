@@ -140,6 +140,12 @@
             ],
             "tsConfig": "projects/app/tsconfig.spec.json"
           }
+        },
+        "json-info": {
+          "builder": "../builder:json-info",
+          "options": {
+            "version": "42.0.1"
+          }
         }
       }
     }
