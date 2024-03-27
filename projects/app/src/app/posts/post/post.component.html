@@ -1,7 +1,9 @@
 @if (post) {
-  <h2>{{post.title}}</h2>
-  <img [src]="post.photo" alt="Post illustration">
-  <p>
-    {{post.content}}
-  </p>
+  <app-tpl-card>
+    <h2>{{post.title}}</h2>
+    <img [src]="post.photo" alt="Post illustration">
+    <p>
+      {{post.content}}
+    </p>
+  </app-tpl-card>
 }

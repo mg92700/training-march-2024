@@ -4,16 +4,14 @@
 </section>
 
 <h1>Liste des posts</h1>
-@if (posts$ | async; as post) {
-  <table>
-    @for (post of post; track post) {
-      <tr>
-        <td>{{post.title}}</td>
-        <td><button [routerLink]="['/posts', post.id]">Allez aux détails</button></td>
-        <td><button (click)="selectPost(post)">Sélectionner le post</button></td>
-      </tr>
-    }
-  </table>
+@if (posts$ | async; as posts) {
+  <app-tpl-card-list [list]="posts">
+    <ng-template #rowRef let-post>
+      <td>{{post.title}}</td>
+      <td><button [routerLink]="['/posts', post.id]">Allez aux détails</button></td>
+      <td><button type="button" (click)="selectPost(post)">Selectionner le post</button></td>
+    </ng-template>
+  </app-tpl-card-list>
 } @else {
   ...
 }
