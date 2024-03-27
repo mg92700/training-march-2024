@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LoggerService } from 'my-lib';
+import { ToasterService } from '../toaster/toaster.service';
 
 @Component({
     selector: 'app-dashboard',
@@ -14,5 +15,7 @@ export class DashboardComponent {
     inject(LoggerService).debug('Dashboard component created');
     inject(LoggerService).info('Dashboard component created');
     inject(LoggerService).error('Dashboard component created');
+
+    inject(ToasterService).open({text: 'My text'});
   }
 }
