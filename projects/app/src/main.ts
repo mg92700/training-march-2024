@@ -1,20 +1,9 @@
 /// <reference types="@angular/localize" />
 
 import { AppComponent } from './app/app.component';
-import { provideHttpClient } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter, withComponentInputBinding } from '@angular/router';
-import { routes } from './app/routes';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { LoggerLevel, provideLogger } from 'my-lib';
+import { appConfig } from './app/app.config';
 
 
-bootstrapApplication(AppComponent, {
-    providers: [
-        provideAnimations(),
-        provideHttpClient(),
-        provideRouter(routes, withComponentInputBinding()),
-        provideLogger(LoggerLevel.INFO)
-    ]
-})
+bootstrapApplication(AppComponent, appConfig)
   .catch(err => console.error(err));
