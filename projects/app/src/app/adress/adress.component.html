@@ -1,0 +1,8 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  Number :<app-custom-input [formControl]="number" placeholder="Number"></app-custom-input>
+  Street :<app-custom-input  [formControl]="street" placeholder="Street"></app-custom-input>
+  Postal Code :<app-custom-input  [formControl]="postalCode" placeholder="Postal Code"></app-custom-input>
+  City :<app-custom-input  [formControl]="city" placeholder="City"></app-custom-input>
+  Country :<app-custom-input  [formControl]="country" placeholder="Country"></app-custom-input>
+  <button type="submit">send</button> 
+</form>
